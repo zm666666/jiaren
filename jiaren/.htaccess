@@ -1,0 +1,7 @@
+# 是否开启URL Rewrite.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d  
+
+RewriteCond $1 !^(index\.php|upload)
+RewriteRule ^(.*)$ /index.php?/$1
